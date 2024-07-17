@@ -1,0 +1,10 @@
+import spotipy
+from spotipy.oauth2 import SpotifyOAuth
+from spotipy.oauth2 import SpotifyClientCredentials
+cid = "e326cc8201dc4444942340727a77863c"
+secret = "0da8786a45004406b2a86181b51b4c85"
+ccm = SpotifyClientCredentials(client_id = cid, client_secret = secret)
+sp = spotipy.Spotify(client_credentials_manager = ccm)
+scope = 'user-library-read'
+username = 'Hogstrang05'
+print(spotipy.current_user())
